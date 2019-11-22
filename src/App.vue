@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!-- <img width="25%" src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Hello Vue in CodeSandbox!" /> -->
+    <Whole/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+//import HelloWorld from "./components/HelloWorld";
+import Whole from "./components/Whole";
 
 export default {
-  name: "app",
+  name: "App",
   components: {
-    HelloWorld
+    Whole
   }
 };
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* text-align: center; */
+  /* color: #2c3e50; */
+  color: #ffffff;
+  /*margin-top: 60px;*/
 }
 </style>
