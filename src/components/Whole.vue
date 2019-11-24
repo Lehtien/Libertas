@@ -119,10 +119,10 @@ document.addEventListener("mousemove", e => {
   cursor.style.transform = `translate(${e.clientX}px,${e.clientY}px) rotate(45deg)`;
   stalker.style.transform = `translate(${e.clientX}px,${
     e.clientY
-  }px) rotate3d(-1, -1, 0, ${30 + i}deg) perspective(100px)`;
+  }px) rotate3d(-1, -1, 0, ${30 + i}deg)`;
   stalker2.style.transform = `translate(${e.clientX}px,${
     e.clientY
-  }px) rotate3d(1, 1, 1, ${30 + i}deg) perspective(100px)`;
+  }px) rotate3d(1, 1, 1, ${30 + i}deg)`;
 
   cursorX = e.clientX;
   cursorY = e.clientY;
@@ -140,18 +140,16 @@ document.addEventListener("mouseenter", () => {
 });
 document.addEventListener("mousedown", () => {
   stalker.style.transform = `translate(${cursorX}px,${cursorY}px)
-  rotate3d(-1, 1, 0, 70deg) perspective(100px)
-  scale(1.5)`;
+  rotate3d(-1, 1, 0, 70deg) scale(1.5)`;
   stalker2.style.transform = `translate(${cursorX}px,${cursorY}px)
-  rotate3d(1, 1, 1, -90deg) perspective(100px) scale(2)`;
+  rotate3d(1, 1, 1, -90deg) scale(2)`;
 });
 document.addEventListener("mouseup", () => {
   i = 0;
   stalker.style.transform = `translate(${cursorX}px,${cursorY}px)
-  rotate3d(-1, -1, 0, 30deg) perspective(100px)
-  scale(1)`;
+  rotate3d(-1, -1, 0, 30deg) scale(1)`;
   stalker2.style.transform = `translate(${cursorX}px,${cursorY}px)
-  rotate3d(1, 1, 1, 30deg) perspective(100px) scale(1)`;
+  rotate3d(1, 1, 1, 30deg) scale(1)`;
 });
 </script>
 

@@ -150,7 +150,7 @@ $diff: -5px;
     max-width: 40vw;
     position: absolute;
     top: 10px;
-    right: -100%;
+    right: -50%;
     /*left: 0;
     top: 0;
     */
