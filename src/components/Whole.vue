@@ -1,29 +1,33 @@
 <template>
   <div id="whole">
-    <!-- <div id="loading">
-      <Loading/>
+    <div id="loading">
+      <Loading />
     </div>
     <div id="contents" class="waiting">
-      <Top/>
-      <Members/>
-      <SS/>
-    </div>-->
-    <Top />
-    <Members />
-    <SS />
-    <transition name="toppage">
-      <a v-scroll-to="'#whole'" class="scroll-top" v-show="isTopBtn">↑ Top</a>
-    </transition>
-    <div class="arrow" v-show="showArrow"></div>
-    <article id="rights">abcdefghijk</article>
-    <Fluid />
+      <Top />
+      <Members />
+      <SS />
+      <transition name="toppage">
+        <a v-scroll-to="'#whole'" class="scroll-top" v-show="isTopBtn">↑ Top</a>
+      </transition>
+      <div class="arrow" v-show="showArrow"></div>
+      <article id="rights">
+        <p>
+          記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。
+        </p>
+        <p>
+          Copyright (C) 2010 - 2019 SQUARE ENIX CO., LTD. All Rights Reserved.
+        </p>
+      </article>
+      <Fluid />
+      <ThreeD />
+    </div>
     <Sandstorm />
-    <ThreeD />
   </div>
 </template>
 
 <script>
-//import Loading from "./Loading";
+import Loading from "./Loading";
 import Top from "./Top";
 import Members from "./Members";
 import SS from "./SS";
@@ -34,7 +38,7 @@ import ThreeD from "./ThreeD";
 export default {
   //name: "App",
   components: {
-    //Loading,
+    Loading,
     Top,
     Members,
     SS,
@@ -51,6 +55,19 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
+
+    const load = document.getElementById("loading");
+    const contents = document.getElementById("contents");
+    const video = document.querySelector("video");
+    window.addEventListener("load", () => {
+      video.addEventListener("canplaythrough", () => {
+        //loadingのdivを非表示に
+        //load.style.display = "none";
+        load.remove();
+        //contentsのdivを表示
+        contents.classList.remove("waiting");
+      });
+    });
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
@@ -150,7 +167,8 @@ body {
   //@at-root
   height: 100%;
 
-  background: rgb(40, 78, 45);
+  //background: rgb(40, 78, 45);
+
   animation: fadeIn 1s ease 0s 1 normal;
 }
 html {
@@ -173,6 +191,7 @@ html {
   height: 100%;
   transform-style: preserve-3d;
   pointer-events: none;
+  z-index: 999;
 }
 
 #cursor {
@@ -222,14 +241,6 @@ html {
   z-index: 999;
 
   border: solid 1px #ffffff;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 // fade
@@ -314,7 +325,8 @@ html {
 // All rights reserved
 #rights {
   text-align: center;
-  margin: 30px 0 10px 0;
+  font-size: 1.2vw;
+  margin: 110px 0 10px 0;
   color: rgba(255, 255, 255, 0.7);
 }
 </style>

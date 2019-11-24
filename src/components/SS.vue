@@ -1,5 +1,5 @@
 <template>
-  <div v-observe-visibility="visibilityChanged">
+  <div class="SSgrp" v-observe-visibility="visibilityChanged">
     <h3 :class="{ activeSS: isVisible }">ScreenShots</h3>
     <div class="loop_ss" :class="{ activeSS: isVisible }">
       <div class="ss">
@@ -7,28 +7,35 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/wallpaper.jpg"
+          src="images/ffxiv_20191117_200227_794.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images/ffxiv_20191112_211600_691.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191030_231857_715.jpg"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191014_215932_651.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\m1.png"
           alt="NoImage"
         />
       </div>
@@ -37,28 +44,35 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/wallpaper.jpg"
+          src="images/ffxiv_20191117_200227_794.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images/ffxiv_20191112_211600_691.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191030_231857_715.jpg"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191014_215932_651.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\m1.png"
           alt="NoImage"
         />
       </div>
@@ -69,28 +83,35 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191014_221057_256.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20190921_005446_385.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20190922_104320_858.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191014_215048_954.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\m3.png"
           alt="NoImage"
         />
       </div>
@@ -99,28 +120,35 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191014_221057_256.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20190921_005446_385.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20190922_104320_858.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/logo.png"
+          src="images\ffxiv_20191014_215048_954.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\m3.png"
           alt="NoImage"
         />
       </div>
@@ -152,31 +180,25 @@ export default {
     isShow() {
       this.showContent = false;
     },
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged(isVisible, entry) { // eslint-disable-line
       this.isVisible = isVisible;
     },
     openModal(event) {
-      // const ss = document.querySelector(".loop_ss > .ss");
-      // ss.style = "animation-play-state: paused";
-      //this.showContent = true;
-      //this.imgUri = event.target.src;
       this.showContent = true;
-      //console.log(this.$parent.showContent);
       this.imgUri = event.target.src;
 
       this.currentY = window.pageYOffset;
       document.querySelector("body").style.position = "fixed";
       document.querySelector("body").style.top = `-${this.currentY}px`;
-
-      //console.log(this.$parent.imgUri);
-      //console.log(this.imgUri);
-      //this.$Members.showContent = true;
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.SSgrp {
+  margin-top: 7vw;
+}
 .loop_ss {
   position: relative;
   display: -webkit-flex;
@@ -206,7 +228,6 @@ export default {
 
 // common
 .activeSS {
-  //transform: translateX(10px);
   transition: opacity 1.5s;
   opacity: 1;
 }
@@ -215,6 +236,7 @@ export default {
   width: 30vw;
   cursor: none;
   transition: transform 1s, box-shadow 1s;
+  margin: 0px 3px 15px;
 }
 .ss_img:hover {
   box-shadow: 3px 1px 3px rgba(255, 255, 255, 1);
@@ -239,7 +261,7 @@ export default {
 
 // text
 h3 {
-  font-size: 10vw;
+  font-size: 5vw;
   font-style: italic;
   text-decoration: underline;
   position: relative;
@@ -248,6 +270,7 @@ h3 {
   display: inline-block;
   opacity: 0;
   will-change: opacity;
+  color: aquamarine;
 }
 h3.activeSS {
   opacity: 1;

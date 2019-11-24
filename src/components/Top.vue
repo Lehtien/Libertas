@@ -1,7 +1,7 @@
 <template>
   <div id="top">
-    <img id="img1" src="../assets/875earth.jpg" />
-    <h1>ABC</h1>
+    <video loop autoplay muted src="../assets/FF14_marriage_hd_a.mp4"></video>
+    <h1>Libertas</h1>
   </div>
 </template>
 
@@ -10,21 +10,31 @@
 </script>
 
 <style lang="scss" scoped>
-#img1 {
-  box-sizing: border-box;
-  width: 100%;
-  border: solid #860ecc;
-}
-
-h1 {
-  position: absolute;
-  top: 20vw;
-  left: 50%;
-  transform: translate(-50%);
-
-  //text-decoration: underline;
-  font-size: 15vw;
-  letter-spacing: 1em;
-  text-indent: 1em;
+div {
+  position: relative;
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+  }
+  h1 {
+    position: absolute;
+    margin: -34% 50%;
+    transform: translate(-50%);
+    font-size: 5vw;
+    font-family: "Times New Roman";
+    letter-spacing: 5vw;
+    text-indent: 5vw;
+    color: rgba(205, 255, 190, 0.418);
+    &::after {
+      content: "";
+      display: block;
+      background: #e0ffcf86;
+      height: 3px;
+      width: 90%;
+      margin: 5px 5%;
+    }
+  }
 }
 </style>

@@ -35,7 +35,7 @@ export default {
     };
   },
   methods: {
-    visibilityChanged(isVisible, entry) {
+    visibilityChanged(isVisible, entry) { // eslint-disable-line
       this.isVisible = isVisible;
       if (!this.isVisible) {
         //this.isVisible = isVisible;
@@ -54,79 +54,44 @@ export default {
   watch: {
     isVisible() {
       const self = this;
-      //const visible = this.isVisible;
-      //console.log(this.isVisible + "!");
-      //this.finished = false;
-      //console.log(this.finished + ": ??");
-      //console.log(this.isVisible + ": is V");
-      //this.finished = false;
-      //if (this.isVisible) {
       const transition = this.$el.querySelector(".img.active");
-      //console.log(transition + "is T if");
-      //if (transition != null) {
-      //console.log(visible + "!");
       if (transition != null) {
-        //console.log(transition);
         self.finished = false;
-        transition.addEventListener("transitionend", function fin(e) {
-          //console.log("Transition ended");
-          //e.stopPropagation();
-          //this.finished = false;
-          //if (e.propertyName === "boxshadow") {
-
-          //e.stopImmediatePropagation();
-          //}
-          //e.stopPropagation();
+        transition.addEventListener("transitionend", function fin() {
           transition.removeEventListener("transitionend", fin);
           self.finished = true;
-          //console.log(self.finished);
         });
       }
     }
-  },
-  mounted() {
-    //this.canvas = document.getElementById("square");
-    const canvas = document.getElementById("square");
-    //this.ctx = this.canvas.getContext("2d");
-    //const canvass = this.$refs.canvas.getContext('2d');
-    if (canvas.getContext) {
-      //const ctx = canvas.getContext("2d");
-      //ctx.fillRect(20,40,50,100);
-      // drawing code here
-    } else {
-      console.log("no");
-    }
-    // if (canvas.getContext){
-    //   var ctx = canvas.getContext('2d');
-    // }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 $diff: -5px;
-
-// Left
+/// Left
 .imgblock.L {
   overflow: hidden;
   position: relative;
-  height: 40vw;
+  height: 25vw;
   //margin-bottom: 10%;
   #square {
-    background: #666;
-    width: 60vw;
-    //height: 300px;
+    background: rgb(102, 165, 126);
+    filter: blur(2px);
+    width: 40vw;
+    height: 22vw;
+    /* transition: all 300ms 0s ease; */
     transform: translateX(-100%);
     opacity: 0;
   }
   #square.active {
-    transform: translateX(10px);
+    transform: translateX(80px);
     transition: transform 1s, opacity 1s;
     opacity: 1;
   }
   .img {
     height: auto;
-    max-width: 60vw;
+    max-width: 40vw;
     position: absolute;
     left: 10px;
     top: 10px;
@@ -135,25 +100,24 @@ $diff: -5px;
     cursor: none;
   }
   .img.active {
-    transform: translateX(10px);
+    transform: translateX(90px);
     transition: transform 2s, opacity 3s, box-shadow 1s;
     opacity: 1;
   }
-
   .img.active.finish:hover {
-    box-shadow: 6px 3px 3px rgba(255, 255, 255, 1);
-    transform: translate(calc(10px + #{$diff}), $diff);
+    box-shadow: 6px 6px 5px rgb(199, 111, 11);
+    transform: translate(calc(90px + #{$diff}), $diff);
     transition: transform 1s, box-shadow 1s;
   }
-
   .chrName {
     position: absolute;
-    left: 55%;
+    left: 40%;
     bottom: 20%;
     transform: translateY(-20px);
     opacity: 0;
-    color: beige;
-    font-size: 4vw;
+    color: rgb(126, 89, 40);
+    font-size: 3vw;
+    font-family: "MS Mincho";
   }
   .chrName.active {
     transform: rotate3d(1, 1, 0, 30deg);
@@ -162,69 +126,112 @@ $diff: -5px;
     opacity: 1;
   }
 }
-
 // Right
 .imgblock.R {
   $pos: calc(100% - 10px);
-
   overflow: hidden;
   position: relative;
-  height: 41vw;
-
+  height: 26vw;
   #square {
-    background: #666;
-    //width: 40%;
-
-    //height: 300px;
-    //max-width: 60%;
+    background: rgb(199, 111, 11);
+    filter: blur(5px);
     position: absolute;
     right: -50px;
-    width: 75vw;
-    //transform: translateX(200%);
+    width: 48vw;
     opacity: 0;
   }
   #square.active {
-    //transform: translateX($pos);
-    right: 10px;
+    right: 80px;
     transition: right 1s, opacity 1s;
     opacity: 1;
   }
   .img {
     height: auto;
-    max-width: 60vw;
+    max-width: 40vw;
     position: absolute;
     top: 10px;
     right: -100%;
+    /*left: 0;
+    top: 0;
+    */
     //transform: translateX(250%);
     opacity: 0;
     cursor: none;
   }
   .img.active {
-    right: 20px;
+    right: 100px;
     //transform: translateX($pos);
     transition: right 2s, transform 2s, opacity 3s, box-shadow 1s;
     opacity: 1;
   }
   .img.active.finish:hover {
-    box-shadow: 6px 3px 3px rgba(255, 255, 255, 1);
-    //transform: translateX($pos);
-    //transform: translate(calc(#{$pos} + #{$diff}), $diff);
+    box-shadow: 6px 6px 5px rgb(102, 165, 126);
     transform: translate(-5px, -5px);
     transition: transform 1s, box-shadow 1s;
   }
   .chrName {
     position: absolute;
-    right: 45%;
+    right: 46%;
     bottom: 20%;
     transform: translateY(-100px);
     opacity: 0;
-    color: beige;
+    color: rgb(85, 146, 76);
+    font-size: 3vw;
+    font-family: "MS Mincho";
   }
   .chrName.active {
     transform: rotate3d(1, 1, 0, 30deg);
     transition-delay: 3s;
     transition: transform 3s, opacity 3s;
     opacity: 1;
+  }
+}
+
+.r {
+  .imgblock {
+    height: 46vw;
+    #square {
+      height: 44vw;
+      width: 60vw;
+      position: relative;
+      left: 20px;
+    }
+    .img {
+      max-width: 25vw;
+      left: 150px;
+    }
+    .chrName {
+      left: 40%;
+    }
+  }
+}
+
+.hp {
+  .imgblock {
+    height: 30vw;
+    #square {
+      width: 60vw;
+      height: 26vw;
+    }
+    .img {
+      max-width: 56vw;
+    }
+    .chrName {
+      right: 58%;
+    }
+  }
+}
+
+.m {
+  .imgblock {
+    height: 47vw;
+    #square {
+      height: 42vw;
+      width: 40vw;
+    }
+    .chrName {
+      right: 41%;
+    }
   }
 }
 </style>

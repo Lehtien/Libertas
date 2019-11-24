@@ -42,9 +42,8 @@ export default {
   justify-content: center;
 
   img {
-    //z-index: 2;
-    border: 2px #ff0000 solid;
-    width: 40vw;
+    border: 1px #ff0000 solid;
+    max-width: 90vmin;
   }
 }
 
