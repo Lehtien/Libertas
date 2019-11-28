@@ -10,7 +10,6 @@
   width: 100%;
   height: 100%;
   background-image: url("../assets/sandstorm.png");
-  //-webkit-animation: noise_anima 0.8s steps(10) infinite;
   animation: sndstrm 1s steps(10) infinite;
   pointer-events: none;
   z-index: 10;

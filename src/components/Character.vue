@@ -16,17 +16,21 @@
     <article class="chrName" :class="{ active: isVisible }">
       {{ charName }}
     </article>
-    <!-- <h1 class="centered" v-observe-visibility="visibilityChanged" :class='{active:isVisible}'>Scroll me</h1> -->
-    <!-- <div class="box" v-scroll="handleScroll"> -->
+    <CharSS :isVisible="isVisible" :position="position" :chrss="chrss" />
   </div>
 </template>
 
 <script>
+import CharSS from "./CharSS";
 export default {
+  components: {
+    CharSS
+  },
   props: {
     position: String,
     imgsrc: String,
-    charName: String
+    charName: String,
+    chrss: Array
   },
   data() {
     return {
@@ -35,7 +39,7 @@ export default {
     };
   },
   methods: {
-    visibilityChanged(isVisible, entry) { // eslint-disable-line
+    visibilityChanged(isVisible) {
       this.isVisible = isVisible;
       if (!this.isVisible) {
         //this.isVisible = isVisible;
@@ -85,7 +89,7 @@ $diff: -5px;
     opacity: 0;
   }
   #square.active {
-    transform: translateX(80px);
+    transform: translateX(6vw);
     transition: transform 1s, opacity 1s;
     opacity: 1;
   }
@@ -100,13 +104,13 @@ $diff: -5px;
     cursor: none;
   }
   .img.active {
-    transform: translateX(90px);
+    transform: translateX(7vw);
     transition: transform 2s, opacity 3s, box-shadow 1s;
     opacity: 1;
   }
   .img.active.finish:hover {
     box-shadow: 6px 6px 5px rgb(199, 111, 11);
-    transform: translate(calc(90px + #{$diff}), $diff);
+    transform: translate(calc(7vw + #{$diff}), $diff);
     transition: transform 1s, box-shadow 1s;
   }
   .chrName {
@@ -115,9 +119,11 @@ $diff: -5px;
     bottom: 20%;
     transform: translateY(-20px);
     opacity: 0;
-    color: rgb(126, 89, 40);
-    font-size: 3vw;
+    color: rgb(243, 143, 62);
+    font-size: 5vw;
     font-family: "MS Mincho";
+    text-shadow: 0.4vw 0.4vw 3px rgb(194, 194, 194);
+    pointer-events: none;
   }
   .chrName.active {
     transform: rotate3d(1, 1, 0, 30deg);
@@ -128,7 +134,6 @@ $diff: -5px;
 }
 // Right
 .imgblock.R {
-  $pos: calc(100% - 10px);
   overflow: hidden;
   position: relative;
   height: 26vw;
@@ -141,7 +146,7 @@ $diff: -5px;
     opacity: 0;
   }
   #square.active {
-    right: 80px;
+    right: 6vw;
     transition: right 1s, opacity 1s;
     opacity: 1;
   }
@@ -151,16 +156,11 @@ $diff: -5px;
     position: absolute;
     top: 10px;
     right: -50%;
-    /*left: 0;
-    top: 0;
-    */
-    //transform: translateX(250%);
     opacity: 0;
     cursor: none;
   }
   .img.active {
-    right: 100px;
-    //transform: translateX($pos);
+    right: 7vw;
     transition: right 2s, transform 2s, opacity 3s, box-shadow 1s;
     opacity: 1;
   }
@@ -176,8 +176,10 @@ $diff: -5px;
     transform: translateY(-100px);
     opacity: 0;
     color: rgb(85, 146, 76);
-    font-size: 3vw;
+    font-size: 5vw;
     font-family: "MS Mincho";
+    text-shadow: 0.4vw 0.4vw 3px rgb(194, 194, 194);
+    pointer-events: none;
   }
   .chrName.active {
     transform: rotate3d(1, 1, 0, 30deg);
@@ -210,8 +212,8 @@ $diff: -5px;
   .imgblock {
     height: 30vw;
     #square {
-      width: 60vw;
-      height: 26vw;
+      width: 70vw;
+      height: 27vw;
     }
     .img {
       max-width: 56vw;

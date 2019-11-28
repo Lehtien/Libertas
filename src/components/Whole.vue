@@ -113,16 +113,23 @@ const stalker2 = document.createElement("div");
 stalker2.id = "stalker2";
 //document.body.appendChild(stalker2);
 pointer.appendChild(stalker2);
+
 let i = 0;
+let enableCall = true;
 document.addEventListener("mousemove", e => {
   i++;
   cursor.style.transform = `translate(${e.clientX}px,${e.clientY}px) rotate(45deg)`;
-  stalker.style.transform = `translate(${e.clientX}px,${
+
+  if (!enableCall) return;
+  enableCall = false;
+  stalker.style.transform = `translate(${e.clientX}px, ${
     e.clientY
   }px) rotate3d(-1, -1, 0, ${30 + i}deg)`;
-  stalker2.style.transform = `translate(${e.clientX}px,${
+  stalker2.style.transform = `translate(${e.clientX}px, ${
     e.clientY
   }px) rotate3d(1, 1, 1, ${30 + i}deg)`;
+
+  setTimeout(() => (enableCall = true), 12);
 
   cursorX = e.clientX;
   cursorY = e.clientY;
@@ -157,7 +164,6 @@ document.addEventListener("mouseup", () => {
 html,
 body {
   position: relative;
-  //position: fixed;
   width: 100%;
   cursor: none;
   margin: 0;
@@ -190,6 +196,9 @@ html {
   transform-style: preserve-3d;
   pointer-events: none;
   z-index: 999;
+  @media screen and (max-width: 559px) {
+    display: none;
+  }
 }
 
 #cursor {
@@ -201,10 +210,11 @@ html {
   width: 10px; //カーソルの直径
   height: 10px; //カーソルの直径
   background: rgba(255, 255, 255, 0.7);
-  //border-radius: 50%;
+  //opacity: 0;
   z-index: 999;
   //transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
   transition: opacity 0.3s ease-in-out;
+  will-change: transform;
 }
 
 #stalker {
@@ -215,14 +225,14 @@ html {
   width: 30px; //マウスストーカーの直径
   height: 30px; //マウスストーカーの直径
   background: rgba(0, 0, 0, 0);
-  //border-radius: 50%;
-  //transform: translate(0, 0) rotate(30deg);
+  //opacity: 0;
   transition: transform 0.2s, opacity 0.3s;
-  //animation: spin 5s linear infinite;
   transition-timing-function: ease-out;
   z-index: 999;
   border: solid 1px #000000;
+  will-change: transform;
 }
+
 #stalker2 {
   pointer-events: none;
   position: fixed;
@@ -231,14 +241,14 @@ html {
   width: 30px; //マウスストーカーの直径
   height: 30px; //マウスストーカーの直径
   background: rgba(0, 0, 0, 0);
-  //border-radius: 50%;
-  //transform: translate(0, 0) rotate(30deg);
+  //opacity: 0;
   transition: transform 0.5s, opacity 0.5s;
   //animation: spin 5s linear infinite;
   transition-timing-function: ease-out;
   z-index: 999;
 
   border: solid 1px #ffffff;
+  will-change: transform;
 }
 
 // fade
@@ -323,7 +333,7 @@ html {
 // All rights reserved
 #rights {
   text-align: center;
-  font-size: 1.2vw;
+  font-size: 0.8vw;
   margin: 110px 0 10px 0;
   color: rgba(255, 255, 255, 0.7);
 }

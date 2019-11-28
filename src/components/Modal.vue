@@ -44,12 +44,14 @@ export default {
   img {
     border: 1px #ff0000 solid;
     max-width: 90vmin;
+    max-height: 90vmin;
   }
 }
 
 // transition fade
 .fade-enter-active,
 .fade-leave-active {
+  opacity: 1;
   transition: opacity 1s ease-in-out;
 }
 .fade-enter,
