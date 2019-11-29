@@ -171,7 +171,10 @@ body {
   //@at-root
   height: 100%;
 
-  //background: rgb(40, 78, 45);
+  // background-image: url("../assets/wlpp2.png");
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
 
   animation: fadeIn 1s ease 0s 1 normal;
 }

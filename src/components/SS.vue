@@ -7,72 +7,87 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ffxiv_20191117_200227_794.png"
+          src="images/ss/s1.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ffxiv_20191112_211600_691.png"
+          src="images/ss/s2.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191030_231857_715.jpg"
+          src="images\ss\s3.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191014_215932_651.png"
+          src="images\ss\s4.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\m1.png"
+          src="images\ss\s5.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s6.jpg"
           alt="NoImage"
         />
       </div>
+      <!---->
       <div class="ss">
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ffxiv_20191117_200227_794.png"
+          src="images/ss/s1.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ffxiv_20191112_211600_691.png"
+          src="images/ss/s2.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191030_231857_715.jpg"
+          src="images\ss\s3.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191014_215932_651.png"
+          src="images\ss\s4.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\m1.png"
+          src="images\ss\s5.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s6.jpg"
           alt="NoImage"
         />
       </div>
@@ -83,72 +98,269 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191014_221057_256.png"
+          src="images\ss\s7.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20190921_005446_385.png"
+          src="images\ss\s8.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20190922_104320_858.png"
+          src="images\ss\s9.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191014_215048_954.png"
+          src="images\ss\s10.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\m3.png"
+          src="images\ss\s11.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img s12"
+          @click="openModal"
+          src="images\ss\s12.png"
           alt="NoImage"
         />
       </div>
+      <!---->
       <div class="ss">
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191014_221057_256.png"
+          src="images\ss\s7.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20190921_005446_385.png"
+          src="images\ss\s8.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20190922_104320_858.png"
+          src="images\ss\s9.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ffxiv_20191014_215048_954.png"
+          src="images\ss\s10.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\m3.png"
+          src="images\ss\s11.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img s12"
+          @click="openModal"
+          src="images\ss\s12.png"
+          alt="NoImage"
+        />
+      </div>
+    </div>
+    <div class="loop_ss" :class="{ activeSS: isVisible }">
+      <div class="ss">
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images/ss/s13.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images/ss/s14.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s15.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img s16"
+          @click="openModal"
+          src="images\ss\s16.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s17.jpg"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s18.png"
+          alt="NoImage"
+        />
+      </div>
+      <!---->
+      <div class="ss">
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images/ss/s13.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images/ss/s14.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s15.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img s16"
+          @click="openModal"
+          src="images\ss\s16.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s17.jpg"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s18.png"
+          alt="NoImage"
+        />
+      </div>
+    </div>
+    <div class="loop_ss_rev" :class="{ activeSS: isVisible }">
+      <div class="ss">
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s19.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s20.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img s21"
+          @click="openModal"
+          src="images\ss\s21.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s22.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s23.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s24.png"
+          alt="NoImage"
+        />
+      </div>
+      <!---->
+      <div class="ss">
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s19.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s20.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img s21"
+          @click="openModal"
+          src="images\ss\s21.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s22.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s23.png"
+          alt="NoImage"
+        />
+        <input
+          type="image"
+          class="ss_img"
+          @click="openModal"
+          src="images\ss\s24.png"
           alt="NoImage"
         />
       </div>
@@ -180,7 +392,7 @@ export default {
     isShow() {
       this.showContent = false;
     },
-    visibilityChanged(isVisible, entry) { // eslint-disable-line
+    visibilityChanged(isVisible) {
       this.isVisible = isVisible;
     },
     openModal(event) {
@@ -201,27 +413,19 @@ export default {
 }
 .loop_ss {
   position: relative;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   opacity: 0;
   .ss {
-    animation: infinity-loop 30s infinite linear 1s both;
+    animation: infinity-loop 60s infinite linear 1s both;
   }
   overflow: hidden;
 }
 .loop_ss_rev {
   position: relative;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   opacity: 0;
   .ss {
-    animation: infinity-loop 30s infinite reverse linear 1s both;
+    animation: infinity-loop 60s infinite reverse linear 1s both;
   }
   overflow: hidden;
 }
@@ -233,21 +437,17 @@ export default {
 }
 .ss_img {
   align-self: center;
-  width: 30vw;
+  width: 25vw;
   cursor: none;
   transition: transform 1s, box-shadow 1s;
   margin: 0px 3px 15px;
 }
 .ss_img:hover {
-  box-shadow: 3px 1px 3px rgba(255, 255, 255, 1);
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 1);
   transform: translateY(-1px);
   transition: transform 1s, box-shadow 1s;
 }
 .ss {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
 }
 @keyframes infinity-loop {
@@ -275,5 +475,15 @@ h3 {
 h3.activeSS {
   opacity: 1;
   transition: opacity 0.5s;
+}
+
+.s12 {
+  width: 12vw;
+}
+.s16 {
+  width: 15vw;
+}
+.s21 {
+  width: 12vw;
 }
 </style>

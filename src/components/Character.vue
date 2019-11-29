@@ -219,7 +219,8 @@ $diff: -5px;
       max-width: 56vw;
     }
     .chrName {
-      right: 58%;
+      right: 51%;
+      bottom: 13%;
     }
   }
 }

@@ -43,8 +43,8 @@ export default {
 
   img {
     border: 1px #ff0000 solid;
-    max-width: 90vmin;
-    max-height: 90vmin;
+    max-height: 70vh;
+    max-width: 80vw;
   }
 }
 
