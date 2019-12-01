@@ -61,6 +61,7 @@ export default {
     const video = document.querySelector("video");
     window.addEventListener("load", () => {
       video.load();
+      video.play();
       video.addEventListener("canplaythrough", () => {
         //loadingのdivを非表示に
         //load.style.display = "none";

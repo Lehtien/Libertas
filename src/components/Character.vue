@@ -196,11 +196,10 @@ $diff: -5px;
       height: 44vw;
       width: 60vw;
       position: relative;
-      left: 20px;
     }
     .img {
       max-width: 25vw;
-      left: 150px;
+      left: 11vw;
     }
     .chrName {
       left: 40%;
