@@ -60,6 +60,7 @@ export default {
     const contents = document.getElementById("contents");
     const video = document.querySelector("video");
     window.addEventListener("load", () => {
+      video.load();
       video.addEventListener("canplaythrough", () => {
         //loadingのdivを非表示に
         //load.style.display = "none";
