@@ -11,7 +11,7 @@
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 50vh;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%) rotate(45deg);
   transform: translate(-50%) rotate(45deg);

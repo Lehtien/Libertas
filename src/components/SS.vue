@@ -42,7 +42,7 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s6.jpg"
+          src="images\ss\s6.png"
           alt="NoImage"
         />
       </div>
@@ -87,7 +87,7 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s6.jpg"
+          src="images\ss\s6.png"
           alt="NoImage"
         />
       </div>
@@ -217,7 +217,7 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s17.jpg"
+          src="images\ss\s17.png"
           alt="NoImage"
         />
         <input
@@ -262,7 +262,7 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s17.jpg"
+          src="images\ss\s17.png"
           alt="NoImage"
         />
         <input

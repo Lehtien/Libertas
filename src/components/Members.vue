@@ -18,7 +18,7 @@
     </div>
     <Character
       position="true"
-      imgsrc="images/chrss/t.jpg"
+      imgsrc="images/chrss/t.png"
       charName="撮の人"
       :chrss="chrss[2]"
     />
@@ -126,10 +126,10 @@ export default {
       "images/chrss/k/k1.png",
       "images/chrss/k/k2.png",
       "images/chrss/k/k3.png",
-      "images/chrss/k/k4.jpg"
+      "images/chrss/k/k4.png"
     ];
     const mr = [
-      "images/chrss/mr/mr1.jpg",
+      "images/chrss/mr/mr1.png",
       "images/chrss/mr/mr2.png",
       "images/chrss/mr/mr3.png",
       "images/chrss/mr/mr4.png"

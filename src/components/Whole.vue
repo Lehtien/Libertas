@@ -35,6 +35,8 @@ import Fluid from "./FluidBtm";
 import Sandstorm from "./Sandstorm";
 import ThreeD from "./ThreeD";
 
+import { throttle } from "throttle-debounce";
+
 export default {
   //name: "App",
   components: {
@@ -81,7 +83,7 @@ export default {
   },
   methods: {
     // スクロール値の取得
-    onScroll() {
+    onScroll: throttle(300, function() {
       this.scrollY = window.pageYOffset;
       const windowBottom =
         document.documentElement.scrollHeight -
@@ -91,7 +93,7 @@ export default {
       } else {
         this.showArrow = true;
       }
-    }
+    })
   }
 };
 let cursorX;
@@ -131,7 +133,7 @@ document.addEventListener("mousemove", e => {
     e.clientY
   }px) rotate3d(1, 1, 1, ${30 + i}deg)`;
 
-  setTimeout(() => (enableCall = true), 12);
+  setTimeout(() => (enableCall = true), 14);
 
   cursorX = e.clientX;
   cursorY = e.clientY;
