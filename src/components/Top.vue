@@ -1,6 +1,12 @@
 <template>
   <div id="top">
-    <video loop autoplay muted src="../assets/FF14_marriage_hd_a.mp4"></video>
+    <video
+      loop
+      autoplay
+      muted
+      playsinline
+      src="../assets/FF14_marriage_hd_a.mp4"
+    ></video>
     <h1>Libertas</h1>
   </div>
 </template>

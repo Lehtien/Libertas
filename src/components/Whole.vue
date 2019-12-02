@@ -303,7 +303,7 @@ html {
 
 // go to top
 .scroll-top {
-  font-size: 14px;
+  font-size: 1.7vw;
   color: white;
   position: fixed;
   top: 10px;
