@@ -1,9 +1,5 @@
 <template>
   <div id="charimg" :class="[{ active: isVisible }, position ? 'T' : 'F']">
-    <!-- <img :src="chrss[0]" class="img1">
-    <img src="images/smpl1.jpg" class="img2">
-    <img src="images/smpl1.jpg" class="img3">
-    <img src="images/smpl1.jpg" class="img4">-->
     <img
       v-for="(image, index) in chrss"
       :src="image"

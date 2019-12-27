@@ -71,9 +71,8 @@
 </template>
 
 <script>
-//import HelloWorld from "./HelloWorld";
 import Character from "./Character";
-import Modal from "./Modal";
+const Modal = () => import("./Modal");
 
 export default {
   components: {

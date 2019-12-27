@@ -23,7 +23,7 @@ div {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 0.9;
+    //opacity: 0.9;
     box-shadow: 0px 14px 20px 0px;
   }
   h1 {

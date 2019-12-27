@@ -29,8 +29,8 @@ export default {
   color: #ffffff;
   /*margin-top: 60px;*/
 
-  background: linear-gradient(#dfa810, #0a4e01d3, #00804f);
+  /* background: linear-gradient(#dfa810, #0a4e01d3, #00804f);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 </style>

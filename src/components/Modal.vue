@@ -42,7 +42,7 @@ export default {
   justify-content: center;
 
   img {
-    border: 1px #ff0000 solid;
+    border: 3px #000000 solid;
     max-height: 70vh;
     max-width: 80vw;
   }

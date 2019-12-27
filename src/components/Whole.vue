@@ -30,8 +30,8 @@
 import Loading from "./Loading";
 import Top from "./Top";
 import Members from "./Members";
-import SS from "./SS";
-import Fluid from "./FluidBtm";
+const SS = () => import("./SS");
+const Fluid = () => import("./FluidBtm");
 import Sandstorm from "./Sandstorm";
 import ThreeD from "./ThreeD";
 
@@ -186,10 +186,13 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
 }
-#whole {
-  background-image: url("../assets/fluid.svg");
-  background-size: cover;
+body {
+  background: rgb(27, 27, 27);
 }
+// #whole {
+//   background-image: url("../assets/fluid.svg");
+//   background-size: cover;
+// }
 .waiting {
   display: none;
 }
@@ -216,7 +219,7 @@ html {
   left: -4px; //座標調節（カーソル位置と円の中心を合わせる）
   width: 10px; //カーソルの直径
   height: 10px; //カーソルの直径
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   //opacity: 0;
   z-index: 999;
   //transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;

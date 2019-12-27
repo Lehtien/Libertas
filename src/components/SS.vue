@@ -375,7 +375,7 @@
 </template>
 
 <script>
-import Modal from "./Modal";
+const Modal = () => import("./Modal");
 export default {
   components: {
     Modal

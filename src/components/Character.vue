@@ -80,7 +80,7 @@ $diff: -5px;
   height: 25vw;
   //margin-bottom: 10%;
   #square {
-    background: rgb(102, 165, 126);
+    background: rgb(0, 0, 0);
     filter: blur(2px);
     width: 40vw;
     height: 22vw;
@@ -109,7 +109,7 @@ $diff: -5px;
     opacity: 1;
   }
   .img.active.finish:hover {
-    box-shadow: 6px 6px 5px rgb(199, 111, 11);
+    box-shadow: 6px 6px 5px rgb(172, 172, 172);
     transform: translate(calc(7vw + #{$diff}), $diff);
     transition: transform 1s, box-shadow 1s;
   }
@@ -119,10 +119,10 @@ $diff: -5px;
     bottom: 20%;
     transform: translateY(-20px);
     opacity: 0;
-    color: rgb(243, 143, 62);
+    color: rgb(255, 255, 255);
     font-size: 5vw;
     font-family: "MS Mincho";
-    text-shadow: 0.4vw 0.4vw 3px rgb(194, 194, 194);
+    text-shadow: 0.4vw 0.4vw 3px rgb(0, 0, 0);
     pointer-events: none;
   }
   .chrName.active {
@@ -138,7 +138,7 @@ $diff: -5px;
   position: relative;
   height: 26vw;
   #square {
-    background: rgb(199, 111, 11);
+    background: rgb(255, 255, 255);
     filter: blur(5px);
     position: absolute;
     right: -50px;
@@ -165,7 +165,7 @@ $diff: -5px;
     opacity: 1;
   }
   .img.active.finish:hover {
-    box-shadow: 6px 6px 5px rgb(102, 165, 126);
+    box-shadow: 6px 6px 5px rgb(0, 0, 0);
     transform: translate(-5px, -5px);
     transition: transform 1s, box-shadow 1s;
   }
@@ -175,7 +175,7 @@ $diff: -5px;
     bottom: 20%;
     transform: translateY(-100px);
     opacity: 0;
-    color: rgb(85, 146, 76);
+    color: rgb(0, 0, 0);
     font-size: 5vw;
     font-family: "MS Mincho";
     text-shadow: 0.4vw 0.4vw 3px rgb(194, 194, 194);
@@ -226,13 +226,16 @@ $diff: -5px;
 
 .m {
   .imgblock {
-    height: 47vw;
+    height: 38vw;
     #square {
-      height: 42vw;
+      height: 35vw;
       width: 40vw;
     }
+    .img {
+      max-width: 30vw;
+    }
     .chrName {
-      right: 41%;
+      right: 33%;
     }
   }
 }

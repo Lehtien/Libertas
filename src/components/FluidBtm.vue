@@ -9,7 +9,7 @@
     enable-background="new 0 0 1000 50"
     xml:space="preserve"
   >
-    <path fill="rgba(51, 255, 153, 0.5">
+    <path fill="rgba(0, 0, 0, 0.7">
       <animate
         dur="5s"
         repeatCount="indefinite"
