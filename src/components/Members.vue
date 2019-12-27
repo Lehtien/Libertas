@@ -167,7 +167,7 @@ h3 {
   display: inline-block;
   opacity: 0;
   will-change: opacity;
-  color: aquamarine;
+  color: rgb(0, 0, 0);
 }
 
 h3.txtmember {

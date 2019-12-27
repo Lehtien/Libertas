@@ -62,15 +62,22 @@ export default {
     const contents = document.getElementById("contents");
     const video = document.querySelector("video");
     window.addEventListener("load", () => {
-      video.load();
-      video.play();
-      video.addEventListener("canplaythrough", () => {
+      if (video === null) {
         //loadingのdivを非表示に
-        //load.style.display = "none";
         load.remove();
         //contentsのdivを表示
         contents.classList.remove("waiting");
-      });
+      } else {
+        video.load();
+        video.play();
+        video.addEventListener("canplaythrough", () => {
+          //loadingのdivを非表示に
+          //load.style.display = "none";
+          load.remove();
+          //contentsのdivを表示
+          contents.classList.remove("waiting");
+        });
+      }
     });
   },
   beforeDestroy() {

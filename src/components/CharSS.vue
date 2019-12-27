@@ -1,11 +1,14 @@
 <template>
   <div id="charimg" :class="[{ active: isVisible }, position ? 'T' : 'F']">
-    <img
+    <!-- <img
       v-for="(image, index) in chrss"
       :src="image"
       :key="index"
       :class="'img' + index"
-    />
+    /> -->
+    <div v-for="(image, index) in chrss" :key="index">
+      <img v-lazy="image" :class="'img' + index" />
+    </div>
   </div>
 </template>
 

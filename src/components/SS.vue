@@ -1,5 +1,9 @@
 <template>
-  <div class="SSgrp" v-observe-visibility="visibilityChanged">
+  <div
+    class="SSgrp"
+    v-observe-visibility="visibilityChanged"
+    v-lazy-container="{ selector: 'input' }"
+  >
     <h3 :class="{ activeSS: isVisible }">ScreenShots</h3>
     <div class="loop_ss" :class="{ activeSS: isVisible }">
       <div class="ss">
@@ -7,42 +11,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s1.png"
+          data-src="images/ss/s1.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s2.png"
+          data-src="images/ss/s2.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s3.png"
+          data-src="images\ss\s3.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s4.png"
+          data-src="images\ss\s4.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s5.png"
+          data-src="images\ss\s5.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s6.png"
+          data-src="images\ss\s6.png"
           alt="NoImage"
         />
       </div>
@@ -52,42 +56,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s1.png"
+          data-src="images/ss/s1.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s2.png"
+          data-src="images/ss/s2.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s3.png"
+          data-src="images\ss\s3.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s4.png"
+          data-src="images\ss\s4.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s5.png"
+          data-src="images\ss\s5.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s6.png"
+          data-src="images\ss\s6.png"
           alt="NoImage"
         />
       </div>
@@ -98,42 +102,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s7.png"
+          data-src="images\ss\s7.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s8.png"
+          data-src="images\ss\s8.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s9.png"
+          data-src="images\ss\s9.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s10.png"
+          data-src="images\ss\s10.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s11.png"
+          data-src="images\ss\s11.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img s12"
           @click="openModal"
-          src="images\ss\s12.png"
+          data-src="images\ss\s12.png"
           alt="NoImage"
         />
       </div>
@@ -143,42 +147,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s7.png"
+          data-src="images\ss\s7.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s8.png"
+          data-src="images\ss\s8.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s9.png"
+          data-src="images\ss\s9.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s10.png"
+          data-src="images\ss\s10.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s11.png"
+          data-src="images\ss\s11.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img s12"
           @click="openModal"
-          src="images\ss\s12.png"
+          data-src="images\ss\s12.png"
           alt="NoImage"
         />
       </div>
@@ -189,42 +193,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s13.png"
+          data-src="images/ss/s13.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s14.png"
+          data-src="images/ss/s14.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s15.png"
+          data-src="images\ss\s15.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img s16"
           @click="openModal"
-          src="images\ss\s16.png"
+          data-src="images\ss\s16.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s17.png"
+          data-src="images\ss\s17.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s18.png"
+          data-src="images\ss\s18.png"
           alt="NoImage"
         />
       </div>
@@ -234,42 +238,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s13.png"
+          data-src="images/ss/s13.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images/ss/s14.png"
+          data-src="images/ss/s14.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s15.png"
+          data-src="images\ss\s15.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img s16"
           @click="openModal"
-          src="images\ss\s16.png"
+          data-src="images\ss\s16.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s17.png"
+          data-src="images\ss\s17.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s18.png"
+          data-src="images\ss\s18.png"
           alt="NoImage"
         />
       </div>
@@ -280,42 +284,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s19.png"
+          data-src="images\ss\s19.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s20.png"
+          data-src="images\ss\s20.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img s21"
           @click="openModal"
-          src="images\ss\s21.png"
+          data-src="images\ss\s21.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s22.png"
+          data-src="images\ss\s22.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s23.png"
+          data-src="images\ss\s23.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s24.png"
+          data-src="images\ss\s24.png"
           alt="NoImage"
         />
       </div>
@@ -325,42 +329,42 @@
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s19.png"
+          data-src="images\ss\s19.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s20.png"
+          data-src="images\ss\s20.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img s21"
           @click="openModal"
-          src="images\ss\s21.png"
+          data-src="images\ss\s21.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s22.png"
+          data-src="images\ss\s22.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s23.png"
+          data-src="images\ss\s23.png"
           alt="NoImage"
         />
         <input
           type="image"
           class="ss_img"
           @click="openModal"
-          src="images\ss\s24.png"
+          data-src="images\ss\s24.png"
           alt="NoImage"
         />
       </div>
@@ -414,6 +418,7 @@ export default {
 .loop_ss {
   position: relative;
   display: flex;
+  flex-basis: 100%;
   opacity: 0;
   .ss {
     animation: infinity-loop 60s infinite linear 1s both;
@@ -425,7 +430,7 @@ export default {
   display: flex;
   opacity: 0;
   .ss {
-    animation: infinity-loop 60s infinite reverse linear 1s both;
+    animation: infinity-loop 80s infinite reverse linear 1s both;
   }
   overflow: hidden;
 }
@@ -440,7 +445,7 @@ export default {
   width: 25vw;
   cursor: none;
   transition: transform 1s, box-shadow 1s;
-  margin: 0px 3px 15px;
+  margin: 0 0.2vh 0.5vw;
 }
 .ss_img:hover {
   box-shadow: 3px 3px 3px rgba(255, 255, 255, 1);
@@ -470,7 +475,7 @@ h3 {
   display: inline-block;
   opacity: 0;
   will-change: opacity;
-  color: aquamarine;
+  color: rgb(0, 0, 0);
 }
 h3.activeSS {
   opacity: 1;
