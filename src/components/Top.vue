@@ -8,7 +8,7 @@
       src="../assets/FF14_marriage_hd_a.mp4"
       v-if="isPC"
     ></video>
-    <img v-else src="../assets/top.png" />
+    <img v-else src="../assets/top.jpg" />
     <h1>Libertas</h1>
     <h2>じゆうの民</h2>
   </div>

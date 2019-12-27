@@ -5,50 +5,50 @@
     </h3>
     <Character
       position="true"
-      imgsrc="images/chrss/h.png"
+      imgsrc="images/chrss/h.jpg"
       charName="不毛の人"
       :chrss="chrss[0]"
     />
     <div class="m">
       <Character
-        imgsrc="images/chrss/m.png"
+        imgsrc="images/chrss/m.jpg"
         charName="愛の人"
         :chrss="chrss[1]"
       />
     </div>
     <Character
       position="true"
-      imgsrc="images/chrss/t.png"
+      imgsrc="images/chrss/t.jpg"
       charName="撮の人"
       :chrss="chrss[2]"
     />
     <Character
-      imgsrc="images/chrss/e.png"
+      imgsrc="images/chrss/e.jpg"
       charName="廃の人"
       :chrss="chrss[3]"
     />
     <Character
       position="true"
-      imgsrc="images/chrss/k.png"
+      imgsrc="images/chrss/k.jpg"
       charName="天使の人"
       :chrss="chrss[4]"
     />
     <Character
-      imgsrc="images/chrss/mr.png"
+      imgsrc="images/chrss/mr.jpg"
       charName="食の人"
       :chrss="chrss[5]"
     />
     <div class="r">
       <Character
         position="true"
-        imgsrc="images/chrss/r.png"
+        imgsrc="images/chrss/r.jpg"
         charName="眠らぬの人"
         :chrss="chrss[6]"
       />
     </div>
     <div class="hp">
       <Character
-        imgsrc="images/chrss/hp.png"
+        imgsrc="images/chrss/hp.jpg"
         charName="神の人"
         :chrss="chrss[7]"
       />
@@ -56,7 +56,7 @@
     <div class="n">
       <Character
         position="true"
-        imgsrc="images/chrss/n.png"
+        imgsrc="images/chrss/n.jpg"
         charName="猫の人"
         :chrss="chrss[8]"
       />
@@ -98,58 +98,58 @@ export default {
   },
   created() {
     const h = [
-      "images/chrss/h/h1.png",
-      "images/chrss/h/h2.png",
-      "images/chrss/h/h3.png",
-      "images/chrss/h/h4.png"
+      "images/chrss/h/h1.jpg",
+      "images/chrss/h/h2.jpg",
+      "images/chrss/h/h3.jpg",
+      "images/chrss/h/h4.jpg"
     ];
     const m = [
-      "images/chrss/m/m1.png",
-      "images/chrss/m/m2.png",
-      "images/chrss/m/m3.png",
-      "images/chrss/m/m4.png"
+      "images/chrss/m/m1.jpg",
+      "images/chrss/m/m2.jpg",
+      "images/chrss/m/m3.jpg",
+      "images/chrss/m/m4.jpg"
     ];
     const t = [
-      "images/chrss/t/t1.png",
-      "images/chrss/t/t2.png",
-      "images/chrss/t/t3.png",
-      "images/chrss/t/t4.png"
+      "images/chrss/t/t1.jpg",
+      "images/chrss/t/t2.jpg",
+      "images/chrss/t/t3.jpg",
+      "images/chrss/t/t4.jpg"
     ];
     const e = [
-      "images/chrss/e/e1.png",
-      "images/chrss/e/e2.png",
-      "images/chrss/e/e3.png",
-      "images/chrss/e/e4.png"
+      "images/chrss/e/e1.jpg",
+      "images/chrss/e/e2.jpg",
+      "images/chrss/e/e3.jpg",
+      "images/chrss/e/e4.jpg"
     ];
     const k = [
-      "images/chrss/k/k1.png",
-      "images/chrss/k/k2.png",
-      "images/chrss/k/k3.png",
-      "images/chrss/k/k4.png"
+      "images/chrss/k/k1.jpg",
+      "images/chrss/k/k2.jpg",
+      "images/chrss/k/k3.jpg",
+      "images/chrss/k/k4.jpg"
     ];
     const mr = [
-      "images/chrss/mr/mr1.png",
-      "images/chrss/mr/mr2.png",
-      "images/chrss/mr/mr3.png",
-      "images/chrss/mr/mr4.png"
+      "images/chrss/mr/mr1.jpg",
+      "images/chrss/mr/mr2.jpg",
+      "images/chrss/mr/mr3.jpg",
+      "images/chrss/mr/mr4.jpg"
     ];
     const r = [
-      "images/chrss/r/r1.png",
-      "images/chrss/r/r2.png",
-      "images/chrss/r/r3.png",
-      "images/chrss/r/r4.png"
+      "images/chrss/r/r1.jpg",
+      "images/chrss/r/r2.jpg",
+      "images/chrss/r/r3.jpg",
+      "images/chrss/r/r4.jpg"
     ];
     const hp = [
-      "images/chrss/hp/hp1.png",
-      "images/chrss/hp/hp2.png",
-      "images/chrss/hp/hp3.png",
-      "images/chrss/hp/hp4.png"
+      "images/chrss/hp/hp1.jpg",
+      "images/chrss/hp/hp2.jpg",
+      "images/chrss/hp/hp3.jpg",
+      "images/chrss/hp/hp4.jpg"
     ];
     const n = [
-      "images/chrss/n/n1.png",
-      "images/chrss/n/n2.png",
-      "images/chrss/n/n3.png",
-      "images/chrss/n/n4.png"
+      "images/chrss/n/n1.jpg",
+      "images/chrss/n/n2.jpg",
+      "images/chrss/n/n3.jpg",
+      "images/chrss/n/n4.jpg"
     ];
     this.chrss.push(h, m, t, e, k, mr, r, hp, n);
   }

@@ -203,7 +203,8 @@ $diff: -5px;
       left: 11vw;
     }
     .chrName {
-      left: 40%;
+      left: 35%;
+      text-shadow: 0.4vw 0.4vw 3px rgb(94, 94, 94);
     }
   }
 }
