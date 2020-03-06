@@ -413,7 +413,7 @@ export default {
 
 <style lang="scss" scoped>
 .SSgrp {
-  margin-top: 7vw;
+  margin-top: 5vw;
 }
 .loop_ss {
   position: relative;

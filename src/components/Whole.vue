@@ -6,6 +6,7 @@
     <div id="contents" class="waiting">
       <Top />
       <Members />
+      <FlickSS />
       <SS />
       <transition name="toppage">
         <a v-scroll-to="'#whole'" class="scroll-top" v-show="isTopBtn">↑ Top</a>
@@ -34,6 +35,7 @@ const SS = () => import("./SS");
 const Fluid = () => import("./FluidBtm");
 import Sandstorm from "./Sandstorm";
 import ThreeD from "./ThreeD";
+import FlickSS from "./FlickSS";
 
 import { throttle } from "throttle-debounce";
 
@@ -46,7 +48,8 @@ export default {
     SS,
     Fluid,
     Sandstorm,
-    ThreeD
+    ThreeD,
+    FlickSS
   },
   data() {
     return {
