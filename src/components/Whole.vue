@@ -17,10 +17,10 @@
           記載されている会社名・製品名・システム名などは、各社の商標、または登録商標です。
         </p>
         <p>
-          Copyright (C) 2010 - 2019 SQUARE ENIX CO., LTD. All Rights Reserved.
+          Copyright (C) 2010 - 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
         </p>
       </article>
-      <Fluid />
+      <!-- <Fluid /> -->
       <ThreeD />
     </div>
     <Sandstorm />
@@ -32,10 +32,10 @@ import Loading from "./Loading";
 import Top from "./Top";
 import Members from "./Members";
 const SS = () => import("./SS");
-const Fluid = () => import("./FluidBtm");
+//const Fluid = () => import("./FluidBtm");
 import Sandstorm from "./Sandstorm";
 import ThreeD from "./ThreeD";
-import FlickSS from "./FlickSS";
+const FlickSS = () => import("./FlickSS");
 
 import { throttle } from "throttle-debounce";
 
@@ -46,7 +46,7 @@ export default {
     Top,
     Members,
     SS,
-    Fluid,
+    //Fluid,
     Sandstorm,
     ThreeD,
     FlickSS

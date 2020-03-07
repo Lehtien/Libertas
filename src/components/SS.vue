@@ -413,6 +413,7 @@ export default {
 
 <style lang="scss" scoped>
 .SSgrp {
+  position: relative;
   margin-top: 5vw;
 }
 .loop_ss {
@@ -421,19 +422,30 @@ export default {
   flex-basis: 100%;
   opacity: 0;
   .ss {
-    animation: infinity-loop 60s infinite linear 1s both;
+    animation: infinity-loop 20s infinite linear 1s both;
+    //animation-play-state: paused;
   }
   overflow: hidden;
+  min-height: 27vw;
 }
 .loop_ss_rev {
   position: relative;
   display: flex;
   opacity: 0;
   .ss {
-    animation: infinity-loop 80s infinite reverse linear 1s both;
+    animation: infinity-loop 40s infinite reverse linear 1s both;
+    //animation-play-state: paused;
   }
   overflow: hidden;
+  min-height: 27vw;
 }
+
+// @for $i from 1 through 4 {
+//   .SSgrp :nth-child(#{$i + 1}) {
+//     //position: absolute;
+//     top: #{100 * $i}px;
+//   }
+// }
 
 // common
 .activeSS {
@@ -483,12 +495,12 @@ h3.activeSS {
 }
 
 .s12 {
-  width: 12vw;
+  width: 13vw;
 }
 .s16 {
-  width: 15vw;
+  width: 20vw;
 }
 .s21 {
-  width: 12vw;
+  width: 14vw;
 }
 </style>

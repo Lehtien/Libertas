@@ -13,7 +13,7 @@
       @mouseleave="touchend"
       data-canmove="true"
     >
-      <img :src="image" />
+      <img v-lazy="image" />
     </div>
   </div>
 </template>
@@ -215,6 +215,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin-top: 10vh;
+  overflow: hidden;
 }
 
 #cards > .card {
