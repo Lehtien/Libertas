@@ -3,12 +3,14 @@
     <h3 :class="{ txtmember: flg }" v-observe-visibility="visibilityChanged">
       MEMBERS
     </h3>
-    <Character
-      position="true"
-      imgsrc="images/chrss/h.jpg"
-      charName="不毛の人"
-      :chrss="chrss[0]"
-    />
+    <div class="h">
+      <Character
+        position="true"
+        imgsrc="images/chrss/h.jpg"
+        charName="The Weakest Cuticle"
+        :chrss="chrss[0]"
+      />
+    </div>
     <div class="m">
       <Character
         imgsrc="images/chrss/m.jpg"
@@ -33,16 +35,18 @@
       charName="天使の人"
       :chrss="chrss[4]"
     />
+    <div class="mr">
     <Character
       imgsrc="images/chrss/mr.jpg"
-      charName="食の人"
+      charName="食品テロリスト"
       :chrss="chrss[5]"
     />
+    </div>
     <div class="r">
       <Character
         position="true"
         imgsrc="images/chrss/r.jpg"
-        charName="眠らぬの人"
+        charName="夜更けの人"
         :chrss="chrss[6]"
       />
     </div>

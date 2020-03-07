@@ -197,7 +197,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  background: rgb(27, 27, 27);
+  background: #e6c0c0;
 }
 // #whole {
 //   background-image: url("../assets/fluid.svg");
@@ -354,7 +354,7 @@ body {
 #rights {
   text-align: center;
   font-size: 0.8vw;
-  margin: 110px 0 10px 0;
+  margin: 110px 0 50px 0;
   color: rgba(255, 255, 255, 0.7);
 }
 </style>

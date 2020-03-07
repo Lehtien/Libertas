@@ -8,7 +8,7 @@ import Vue2TouchEvents from "vue2-touch-events";
 Vue.use(VueObserveVisibility);
 Vue.use(VueScrollTo, { duration: 500, easing: "ease" });
 Vue.use(VueLazyload, { preLoad: 2, observer: true, throttleWait: 0 });
-Vue.use(Vue2TouchEvents, { swipeTolerance: 380 });
+Vue.use(Vue2TouchEvents, { swipeTolerance: 100 });
 
 Vue.config.productionTip = false;
 

@@ -190,6 +190,15 @@ $diff: -5px;
   }
 }
 
+.h {
+  .imgblock {
+    .chrName {
+      bottom: 10%;
+      left: 10%;
+      //text-shadow: 0.4vw 0.4vw 3px rgb(94, 94, 94);
+    }
+  }
+}
 .r {
   .imgblock {
     height: 46vw;
@@ -240,5 +249,13 @@ $diff: -5px;
       right: 33%;
     }
   }
+}
+
+.mr {
+  .imgblock {
+    .chrName {
+      right: 25%;
+  }
+}
 }
 </style>

@@ -7,13 +7,16 @@
       :key="index"
       :style="cardStyle[index]"
       v-touch:swipe="swipe(index)"
-      @mousedown="touchstart"
+      @mousedown.prevent="touchstart"
       @mousemove="touchmove"
       @mouseup="touchend"
       @mouseleave="touchend"
+      @touchstart.prevent="touchstart"
+      @touchmove="touchmove"
+      @touchend="touchend"
       data-canmove="true"
     >
-      <img v-lazy="image" />
+      <img :src="image" />
     </div>
   </div>
 </template>
@@ -33,7 +36,10 @@ const ss = [
   "images/cardSS/0011.jpg",
   "images/cardSS/0012.jpg",
   "images/cardSS/0013.jpg",
-  "images/cardSS/0014.jpg"
+  "images/cardSS/0014.jpg",
+  "images/cardSS/0015.jpg",
+  "images/cardSS/0016.jpg",
+  "images/cardSS/0017.jpg"
 ];
 
 // swipe-translate
@@ -70,8 +76,6 @@ export default {
     visibilityChanged(isVisible) {
       this.isVisible = isVisible;
       const cards = document.querySelectorAll(".card");
-      console.log(isVisible); // eslint-disable-line
-      //setTimeout(() => {
       this.cardStyle = [];
       for (let i = 0; i < cards.length; i++) {
         const rot = -10 + Math.random() * 20;
@@ -82,7 +86,7 @@ export default {
         if (isVisible) {
           transform = `translate3d(0, ${-4 * i}px, 0) perspective(1500px)
           rotateX(30deg) rotateY(${rot / 10}deg) rotateZ(${rot}deg) scale(1)`;
-          transition = `transform 1.5s ease-in-out ${0.2 * i}s`;
+          transition = `transform 1s ease-in-out ${0.2 * i}s`;
         } else {
           transform = `translate3d(${sign * 2000}px, 0, 0) perspective(1500px)
           rotateX(30deg) rotateY(${rot / 10}deg) rotateZ(${rot}deg) scale(1)`;
@@ -91,16 +95,15 @@ export default {
           transform: transform,
           transition: transition
         };
-
         this.cardStyle.push(styleObj);
       }
-      //}, 0);
     },
     swipe(index) {
       return (direction, e) => {
         if (direction === "left" || direction === "right") {
+          const posX = direction === "left" ? -2000 : 2000;
           const style = e.target.style;
-          style.transform = translateX(style.transform, this.currentPosX);
+          style.transform = translateX(style.transform, posX);
           e.target.dataset.canmove = false;
           if (index === 0) this.resetCardPosition();
         }
@@ -157,7 +160,9 @@ export default {
       if (e.target.dataset.canmove === "false") return;
 
       this.isDragging = true;
-      this.prevPosX = e.clientX;
+      this.prevPosX = e.changedTouches
+        ? e.changedTouches[0].clientX
+        : false || e.clientX;
       const prevTransform = e.target.style.transform;
 
       e.target.style.transform = prevTransform.replace(
@@ -170,7 +175,10 @@ export default {
       // 押下中だったら
       if (this.isDragging) {
         // 前回座標との差分を算出
-        this.currentPosX = e.clientX - this.prevPosX;
+        this.currentPosX =
+          (e.changedTouches
+            ? e.changedTouches[0].clientX
+            : false || e.clientX) - this.prevPosX;
 
         const style = e.target.style;
         style.transform = translateX(style.transform, this.currentPosX);
@@ -209,7 +217,7 @@ export default {
 #cards {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 60vw;
   will-change: transform;
   display: flex;
   align-items: center;
@@ -222,14 +230,14 @@ export default {
   position: absolute;
   background-color: rgb(255, 255, 255);
   background-repeat: no-repeat;
-  //width: 27%;
+  //width: 60%;
   max-width: 720px;
-  height: 50%;
+  height: 30vw;
   max-height: 480px;
   will-change: transform;
   border-radius: 10px;
-  box-shadow: 0 12.5px 100px -10px rgba(0, 0, 0, 0.3),
-    0 10px 10px -10px rgba(50, 50, 73, 0.5);
+  box-shadow: 0 12.5px 60px -10px rgba(0, 0, 0, 0.2),
+    0 10px 10px -10px rgba(50, 50, 73, 0.3);
   margin-top: 5%;
 
   align-items: center;
@@ -237,7 +245,7 @@ export default {
   justify-content: center;
   user-select: none;
 
-  transform: translate3d(-2000px, -2000px, 0);
+  transform: translate3d(-2000px, 0, 0);
 }
 
 img {
@@ -247,6 +255,7 @@ img {
   max-height: 90%;
 
   pointer-events: none;
+  border: 2px #000000 solid;
 }
 
 // text
