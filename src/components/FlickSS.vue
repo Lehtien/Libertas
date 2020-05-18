@@ -121,9 +121,10 @@ export default {
               const rot = -10 + Math.random() * 20;
               const sign =
                 cards[i].style.transform.indexOf("-") === 12 ? 1 : -1;
-              const trans = `translate3d(${sign *
-                2000}px, 0, 0) perspective(1500px) rotateX(30deg) rotateY(${rot /
-                10}deg) rotateZ(${rot}deg) scale(1)`;
+              const trans = `translate3d(${sign * 2000}px, 0, 0)
+                              perspective(1500px)
+                              rotateX(30deg) rotateY(${rot / 10}deg)
+                              rotateZ(${rot}deg) scale(1)`;
 
               const styleObj = {
                 transform: trans,
@@ -142,8 +143,8 @@ export default {
             const rot = -10 + Math.random() * 20;
 
             const trans = `translate3d(0, ${-4 * i}px, 0) perspective(1500px)
-                           rotateX(30deg) rotateY(${rot /
-                             10}deg) rotateZ(${rot}deg) scale(1)`;
+                            rotateX(30deg) rotateY(${rot / 10}deg)
+                            rotateZ(${rot}deg) scale(1)`;
 
             const styleObj = {
               transform: trans,

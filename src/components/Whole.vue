@@ -1,10 +1,12 @@
 <template>
   <div id="whole">
-    <div id="loading">
+    <!--    <div id="loading">
       <Loading />
-    </div>
-    <div id="contents" class="waiting">
-      <Top />
+    </div>-->
+    <!-- <div id="contents" class="waiting"> -->
+      <div id="contents">
+      
+      <Top /> 
       <Members />
       <FlickSS />
       <SS />
@@ -28,7 +30,7 @@
 </template>
 
 <script>
-import Loading from "./Loading";
+//import Loading from "./Loading";
 import Top from "./Top";
 import Members from "./Members";
 const SS = () => import("./SS");
@@ -42,7 +44,7 @@ import { throttle } from "throttle-debounce";
 export default {
   //name: "App",
   components: {
-    Loading,
+    //Loading,
     Top,
     Members,
     SS,
@@ -60,7 +62,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
-
+    /*
     const load = document.getElementById("loading");
     const contents = document.getElementById("contents");
     const video = document.querySelector("video");
@@ -81,7 +83,7 @@ export default {
           contents.classList.remove("waiting");
         });
       }
-    });
+    });*/
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
