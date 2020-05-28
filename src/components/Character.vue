@@ -48,7 +48,7 @@ export default {
     },
     openModal(event) {
       this.$parent.showContent = true;
-      this.$parent.imgUri = event.target.src;
+      this.$parent.imgUri = event.target.src.replace(/.jpg/, "_large.jpg"); // modal表示画像のurl
 
       const currentScrollY = window.pageYOffset;
       this.$parent.currentY = currentScrollY;
@@ -255,7 +255,7 @@ $diff: -5px;
   .imgblock {
     .chrName {
       right: 25%;
+    }
   }
-}
 }
 </style>

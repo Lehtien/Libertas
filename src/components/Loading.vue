@@ -32,7 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(82, 82, 82);
+  background-color: rgb(30, 70, 44);
   -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
   animation: sk-foldCubeAngle 2.4s infinite linear both;
   -webkit-transform-origin: 100% 100%;

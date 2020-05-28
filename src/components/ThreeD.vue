@@ -83,7 +83,7 @@ export default {
         const physics = this.world.add({
           type: "box",
           size: [4, this.boardHeight, this.boardWidth],
-          pos: [this.randomRange(-200, 200), 400, this.randomRange(-100, 100)],
+          pos: [this.randomRange(-200, 200), 250, this.randomRange(-100, 100)],
           rot: [0, this.randomRange(0, 180), this.randomRange(-45, -135)],
           move: true,
           density: 1,
@@ -93,7 +93,7 @@ export default {
         this.physics.push(physics);
         if (this.physics.length >= this.boardSS.length)
           clearInterval(intervalId);
-      }, 4 * 1000);
+      }, 2.5 * 1000);
     },
     // 乱数を指定範囲内で取得
     randomRange(min, max) {
@@ -172,6 +172,7 @@ export default {
       );
       for (let i = 0; i < this.boardSS.length; i++) {
         const texture = loader.load(this.boardSS[i]);
+        texture.minFilter = THREE.LinearFilter;
         const material = new THREE.MeshLambertMaterial({ map: texture });
 
         const mesh = new THREE.Mesh(geometry, material);

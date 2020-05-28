@@ -13,6 +13,7 @@
   animation: sndstrm 1s steps(10) infinite;
   pointer-events: none;
   z-index: 10;
+  opacity: 0.85;
 }
 
 @keyframes sndstrm {

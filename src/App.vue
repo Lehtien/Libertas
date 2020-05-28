@@ -2,18 +2,19 @@
   <div id="app">
     <!-- <img width="25%" src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Hello Vue in CodeSandbox!" /> -->
-    <Whole />
+    <!-- <Whole /> -->
+    <router-view />
   </div>
 </template>
 
 <script>
 //import HelloWorld from "./components/HelloWorld";
-import Whole from "./components/Whole";
+// import Whole from "./components/Whole";
 
 export default {
   name: "App",
   components: {
-    Whole
+    // Whole
   }
 };
 </script>

@@ -1,371 +1,51 @@
 <template>
-  <div
-    class="SSgrp"
-    v-observe-visibility="visibilityChanged"
-    v-lazy-container="{ selector: 'input' }"
-  >
+  <div class="SSgrp" v-observe-visibility="visibilityChanged">
     <h3 :class="{ activeSS: isVisible }">ScreenShots</h3>
     <div class="loop_ss" :class="{ activeSS: isVisible }">
-      <div class="ss">
+      <div class="ss" v-for="n in 2" :key="'div-' + n">
         <input
           type="image"
           class="ss_img"
+          v-for="n in 6"
+          :src="'images/ss/s' + n + '.jpg'"
+          :key="n"
           @click="openModal"
-          data-src="images/ss/s1.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images/ss/s2.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s3.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s4.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s5.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s6.png"
-          alt="NoImage"
-        />
-      </div>
-      <!---->
-      <div class="ss">
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images/ss/s1.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images/ss/s2.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s3.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s4.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s5.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s6.png"
-          alt="NoImage"
         />
       </div>
     </div>
     <div class="loop_ss_rev" :class="{ activeSS: isVisible }">
-      <div class="ss">
+      <div class="ss" v-for="n in 2" :key="'div-' + n">
         <input
           type="image"
           class="ss_img"
+          v-for="n in 6"
+          :src="'images/ss/s' + (n + 6) + '.jpg'"
+          :key="n"
           @click="openModal"
-          data-src="images\ss\s7.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s8.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s9.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s10.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s11.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img s12"
-          @click="openModal"
-          data-src="images\ss\s12.png"
-          alt="NoImage"
-        />
-      </div>
-      <!---->
-      <div class="ss">
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s7.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s8.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s9.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s10.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s11.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img s12"
-          @click="openModal"
-          data-src="images\ss\s12.png"
-          alt="NoImage"
         />
       </div>
     </div>
     <div class="loop_ss" :class="{ activeSS: isVisible }">
-      <div class="ss">
+      <div class="ss" v-for="n in 2" :key="'div-' + n">
         <input
           type="image"
           class="ss_img"
+          v-for="n in 6"
+          :src="'images/ss/s' + (n + 12) + '.jpg'"
+          :key="n"
           @click="openModal"
-          data-src="images/ss/s13.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images/ss/s14.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s15.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img s16"
-          @click="openModal"
-          data-src="images\ss\s16.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s17.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s18.png"
-          alt="NoImage"
-        />
-      </div>
-      <!---->
-      <div class="ss">
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images/ss/s13.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images/ss/s14.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s15.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img s16"
-          @click="openModal"
-          data-src="images\ss\s16.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s17.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s18.png"
-          alt="NoImage"
         />
       </div>
     </div>
     <div class="loop_ss_rev" :class="{ activeSS: isVisible }">
-      <div class="ss">
+      <div class="ss" v-for="n in 2" :key="'div-' + n">
         <input
           type="image"
           class="ss_img"
+          v-for="n in 6"
+          :src="'images/ss/s' + (n + 18) + '.jpg'"
+          :key="n"
           @click="openModal"
-          data-src="images\ss\s19.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s20.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img s21"
-          @click="openModal"
-          data-src="images\ss\s21.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s22.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s23.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s24.png"
-          alt="NoImage"
-        />
-      </div>
-      <!---->
-      <div class="ss">
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s19.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s20.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img s21"
-          @click="openModal"
-          data-src="images\ss\s21.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s22.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s23.png"
-          alt="NoImage"
-        />
-        <input
-          type="image"
-          class="ss_img"
-          @click="openModal"
-          data-src="images\ss\s24.png"
-          alt="NoImage"
         />
       </div>
     </div>
@@ -398,10 +78,11 @@ export default {
     },
     visibilityChanged(isVisible) {
       this.isVisible = isVisible;
+      if (!isVisible) return;
     },
     openModal(event) {
       this.showContent = true;
-      this.imgUri = event.target.src;
+      this.imgUri = event.target.src.replace(/ss/, "ss_large"); // modal表示画像のurl
 
       this.currentY = window.pageYOffset;
       document.querySelector("body").style.position = "fixed";
@@ -419,11 +100,11 @@ export default {
 .loop_ss {
   position: relative;
   display: flex;
-  flex-basis: 100%;
   opacity: 0;
+  width: 100%;
   .ss {
     animation: infinity-loop 20s infinite linear 1s both;
-    //animation-play-state: paused;
+    // animation-play-state: paused;
   }
   overflow: hidden;
   min-height: 27vw;
@@ -432,20 +113,14 @@ export default {
   position: relative;
   display: flex;
   opacity: 0;
+  width: 100%;
   .ss {
-    animation: infinity-loop 40s infinite reverse linear 1s both;
-    //animation-play-state: paused;
+    animation: infinity-loop 30s infinite reverse linear 1s both;
+    // animation-play-state: paused;
   }
   overflow: hidden;
   min-height: 27vw;
 }
-
-// @for $i from 1 through 4 {
-//   .SSgrp :nth-child(#{$i + 1}) {
-//     //position: absolute;
-//     top: #{100 * $i}px;
-//   }
-// }
 
 // common
 .activeSS {
@@ -454,10 +129,13 @@ export default {
 }
 .ss_img {
   align-self: center;
-  width: 25vw;
   cursor: none;
   transition: transform 1s, box-shadow 1s;
   margin: 0 0.2vh 0.5vw;
+  border: solid 1px rgb(23, 58, 23);
+  @media screen and (max-width: 559px) {
+    max-width: 110px;
+  }
 }
 .ss_img:hover {
   box-shadow: 3px 3px 3px rgba(255, 255, 255, 1);
@@ -492,15 +170,5 @@ h3 {
 h3.activeSS {
   opacity: 1;
   transition: opacity 0.5s;
-}
-
-.s12 {
-  width: 13vw;
-}
-.s16 {
-  width: 20vw;
-}
-.s21 {
-  width: 14vw;
 }
 </style>

@@ -21,7 +21,7 @@ export default {
       isPC: false
     };
   },
-  mounted() {
+  created() {
     if (window.screen.width >= 560) {
       this.isPC = true;
     }

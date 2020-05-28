@@ -1,12 +1,11 @@
 <template>
   <div id="whole">
-    <!--    <div id="loading">
+    <div id="loading">
       <Loading />
-    </div>-->
-    <!-- <div id="contents" class="waiting"> -->
-      <div id="contents">
-      
-      <Top /> 
+    </div>
+    <div id="contents" class="waiting">
+      <!-- <div id="contents"> -->
+      <Top />
       <Members />
       <FlickSS />
       <SS />
@@ -22,36 +21,40 @@
           Copyright (C) 2010 - 2020 SQUARE ENIX CO., LTD. All Rights Reserved.
         </p>
       </article>
+      <Nav />
+
       <!-- <Fluid /> -->
-      <ThreeD />
+      <!-- <ThreeD /> -->
     </div>
     <Sandstorm />
   </div>
 </template>
 
 <script>
-//import Loading from "./Loading";
+import Loading from "./Loading";
 import Top from "./Top";
 import Members from "./Members";
 const SS = () => import("./SS");
 //const Fluid = () => import("./FluidBtm");
 import Sandstorm from "./Sandstorm";
-import ThreeD from "./ThreeD";
+// import ThreeD from "./ThreeD";
 const FlickSS = () => import("./FlickSS");
+import Nav from "./Navigator";
 
 import { throttle } from "throttle-debounce";
 
 export default {
   //name: "App",
   components: {
-    //Loading,
+    Loading,
     Top,
     Members,
     SS,
     //Fluid,
     Sandstorm,
-    ThreeD,
-    FlickSS
+    // ThreeD,
+    FlickSS,
+    Nav
   },
   data() {
     return {
@@ -62,28 +65,39 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
-    /*
+
     const load = document.getElementById("loading");
     const contents = document.getElementById("contents");
-    const video = document.querySelector("video");
-    window.addEventListener("load", () => {
+    if (isBeforePage) {
+      load.remove();
+      contents.classList.remove("waiting");
+      return;
+    }
+
+    window.addEventListener("load", function loading() {
+      const video = document.querySelector("video");
+      //alert("ページが読み込まれました！");
       if (video === null) {
+        // video表示しない場合(smartphone)
         //loadingのdivを非表示に
         load.remove();
         //contentsのdivを表示
         contents.classList.remove("waiting");
       } else {
+        // video表示する場合
         video.load();
         video.play();
-        video.addEventListener("canplaythrough", () => {
+        video.addEventListener("canplaythrough", function videoPlay() {
           //loadingのdivを非表示に
           //load.style.display = "none";
           load.remove();
           //contentsのdivを表示
           contents.classList.remove("waiting");
+          this.removeEventListener("canplaythrough", videoPlay);
         });
       }
-    });*/
+      this.removeEventListener("load", loading);
+    });
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
@@ -106,8 +120,14 @@ export default {
         this.showArrow = true;
       }
     })
+  },
+  beforeRouteEnter(to, from, next) {
+    if (from.name !== null) isBeforePage = true;
+    next();
   }
 };
+let isBeforePage = false; // 遷移前ページの存在(ローディング画面を表示するかどうか)
+
 let cursorX;
 let cursorY;
 // cursol, stalker
@@ -199,7 +219,7 @@ html {
   overflow-y: scroll;
 }
 body {
-  background: #e6c0c0;
+  background: #ccddb4;
 }
 // #whole {
 //   background-image: url("../assets/fluid.svg");
@@ -319,11 +339,14 @@ body {
 // go to top
 .scroll-top {
   font-size: 1.7vw;
-  color: white;
+  color: rgb(0, 0, 0);
   position: fixed;
-  top: 10px;
-  right: 20px;
+  bottom: 10%;
+  right: 3%;
   opacity: 0.5;
+  text-shadow: 1px 1px 2px #ffffff, -1px 1px 2px #ffffff, 1px -1px 2px #ffffff,
+    -1px -1px 2px #ffffff, 1px 0px 2px #ffffff, 0px 1px 2px #ffffff,
+    -1px 0px 2px #ffffff, 0px -1px 2px #ffffff;
 
   display: inline-block;
   &::after {
@@ -333,7 +356,7 @@ body {
     content: "";
     width: 0;
     height: 1px;
-    background-color: #ffffff;
+    background-color: #000000;
     transition: 0.3s;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -357,6 +380,6 @@ body {
   text-align: center;
   font-size: 0.8vw;
   margin: 110px 0 50px 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.7);
 }
 </style>

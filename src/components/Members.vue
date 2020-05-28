@@ -7,7 +7,7 @@
       <Character
         position="true"
         imgsrc="images/chrss/h.jpg"
-        charName="The Weakest Cuticle"
+        charName="ふぁっしょんりーだー"
         :chrss="chrss[0]"
       />
     </div>
@@ -36,11 +36,11 @@
       :chrss="chrss[4]"
     />
     <div class="mr">
-    <Character
-      imgsrc="images/chrss/mr.jpg"
-      charName="食品テロリスト"
-      :chrss="chrss[5]"
-    />
+      <Character
+        imgsrc="images/chrss/mr.jpg"
+        charName="食品テロリスト"
+        :chrss="chrss[5]"
+      />
     </div>
     <div class="r">
       <Character
