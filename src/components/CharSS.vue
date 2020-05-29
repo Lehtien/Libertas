@@ -100,6 +100,26 @@ export default {
   transition-delay: 0.5s;
 }
 
+.h {
+  #charimg {
+    .img2 {
+      width: 45%;
+      top: 9vw;
+      left: 4.5vw;
+    }
+  }
+}
+
+.e {
+  #charimg {
+    .img3 {
+      width: 38%;
+      top: 9vw;
+      left: 20vw;
+    }
+  }
+}
+
 .hp {
   #charimg {
     .img2 {
@@ -113,6 +133,15 @@ export default {
     .img2 {
       width: 50%;
       left: 4vw;
+    }
+  }
+}
+
+.p {
+  #charimg {
+    .img3 {
+      width: 38%;
+      left: 19vw;
     }
   }
 }

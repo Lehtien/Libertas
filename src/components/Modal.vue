@@ -42,9 +42,9 @@ export default {
   justify-content: center;
 
   img {
-    border: 3px #000000 solid;
-    max-height: 70vh;
-    max-width: 80vw;
+    border: ridge 2px #b68603;
+    max-height: 90vh;
+    max-width: 90vw;
   }
 }
 

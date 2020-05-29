@@ -28,6 +28,7 @@
       imgsrc="images/chrss/e.jpg"
       charName="廃の人"
       :chrss="chrss[3]"
+      class="e"
     />
     <Character
       position="true"
@@ -65,6 +66,12 @@
         :chrss="chrss[8]"
       />
     </div>
+    <Character
+      imgsrc="images/chrss/p.jpg"
+      charName="パパの人"
+      :chrss="chrss[9]"
+      class="p"
+    />
     <Modal
       :showContent="showContent"
       @isS="isShow"
@@ -155,7 +162,13 @@ export default {
       "images/chrss/n/n3.jpg",
       "images/chrss/n/n4.jpg"
     ];
-    this.chrss.push(h, m, t, e, k, mr, r, hp, n);
+    const p = [
+      "images/chrss/p/p1.jpg",
+      "images/chrss/p/p2.jpg",
+      "images/chrss/p/p3.jpg",
+      "images/chrss/p/p4.jpg"
+    ];
+    this.chrss.push(h, m, t, e, k, mr, r, hp, n, p);
   }
 };
 </script>

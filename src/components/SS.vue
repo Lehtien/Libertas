@@ -107,7 +107,6 @@ export default {
     // animation-play-state: paused;
   }
   overflow: hidden;
-  min-height: 27vw;
 }
 .loop_ss_rev {
   position: relative;
@@ -119,7 +118,6 @@ export default {
     // animation-play-state: paused;
   }
   overflow: hidden;
-  min-height: 27vw;
 }
 
 // common

@@ -1,18 +1,17 @@
 <template>
   <div class="housepage">
     <p class="title">HOUSING</p>
-    <!-- <p style="margin: 100%"></p> -->
+    <House
+      :house-small="fcHouseSmall"
+      :house-large="fcHouseLarge"
+      houseName="かんぱにの家"
+      class="fc-house"
+    />
     <House
       :house-small="tHouseSmall"
       :house-large="tHouseLarge"
       houseName="撮の家"
       class="t-house"
-    />
-    <House
-      :house-small="tHouseSmall"
-      :house-large="tHouseLarge"
-      houseName="食品テロリストの家"
-      class="mr-house"
     />
     <transition name="toppage">
       <a v-scroll-to="'.housepage'" class="scroll-top" v-show="isTopBtn"
@@ -70,6 +69,24 @@ export default {
     })
   },
   computed: {
+    fcHouseSmall() {
+      return [
+        "images/house/fc/fc_small/01_small.jpg",
+        "images/house/fc/fc_small/02_small.jpg",
+        "images/house/fc/fc_small/03_small.jpg",
+        "images/house/fc/fc_small/04_small.jpg",
+        "images/house/fc/fc_small/05_small.jpg"
+      ];
+    },
+    fcHouseLarge() {
+      return [
+        "images/house/fc/fc_large/01_large.jpg",
+        "images/house/fc/fc_large/02_large.jpg",
+        "images/house/fc/fc_large/03_large.jpg",
+        "images/house/fc/fc_large/04_large.jpg",
+        "images/house/fc/fc_large/05_large.jpg"
+      ];
+    },
     tHouseSmall() {
       return [
         "images/house/t/t_small/01_small.jpg",

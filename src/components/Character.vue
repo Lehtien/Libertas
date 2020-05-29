@@ -78,10 +78,10 @@ $diff: -5px;
 .imgblock.L {
   overflow: hidden;
   position: relative;
-  height: 25vw;
+  height: 28vw;
   //margin-bottom: 10%;
   #square {
-    background: rgb(0, 0, 0);
+    background: rgb(0, 66, 17);
     filter: blur(2px);
     width: 40vw;
     height: 22vw;
@@ -103,6 +103,7 @@ $diff: -5px;
     transform: translateX(-150%);
     opacity: 0;
     cursor: none;
+    border: ridge 1.5px rgb(84, 0, 87);
   }
   .img.active {
     transform: translateX(7vw);
@@ -137,9 +138,9 @@ $diff: -5px;
 .imgblock.R {
   overflow: hidden;
   position: relative;
-  height: 26vw;
+  height: 28vw;
   #square {
-    background: rgb(255, 255, 255);
+    background: rgb(255, 216, 231);
     filter: blur(5px);
     position: absolute;
     right: -50px;
@@ -159,6 +160,7 @@ $diff: -5px;
     right: -50%;
     opacity: 0;
     cursor: none;
+    border: ridge 1.5px rgb(0, 65, 45)
   }
   .img.active {
     right: 7vw;
@@ -179,7 +181,7 @@ $diff: -5px;
     color: rgb(0, 0, 0);
     font-size: 5vw;
     font-family: "MS Mincho";
-    text-shadow: 0.4vw 0.4vw 3px rgb(194, 194, 194);
+    text-shadow: 0.4vw 0.4vw 3px rgb(155, 155, 155);
     pointer-events: none;
   }
   .chrName.active {
@@ -201,9 +203,9 @@ $diff: -5px;
 }
 .r {
   .imgblock {
-    height: 46vw;
+    height: 48vw;
     #square {
-      height: 44vw;
+      height: 46.5vw;
       width: 60vw;
       position: relative;
     }

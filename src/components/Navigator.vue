@@ -27,6 +27,10 @@ a {
   display: inline-block;
   text-decoration: none;
   cursor: none;
+  @media screen and (max-width: 559px) {
+    right: 10%;
+    font-size: 1em;
+  }
 }
 a::after {
   position: absolute;

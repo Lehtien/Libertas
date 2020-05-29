@@ -72,8 +72,10 @@ export default {
   background-clip: text;
   color: transparent;
   margin: 0;
-  transform: translateX(23%);
   font-size: 1.8vw;
+  position: relative;
+  left: 23%;
+  display: inline;
 }
 // 大画像
 .main-block {
@@ -104,6 +106,7 @@ export default {
     min-width: 0;
     margin: 0 0.1%;
     opacity: 0;
+    border: solid 1px white;
     &:hover {
       transform: scale(0.98);
     }
@@ -144,5 +147,9 @@ export default {
 }
 input[type="image"] {
   cursor: none;
+}
+
+.fc-house .main-block {
+  height: 28vw;
 }
 </style>
