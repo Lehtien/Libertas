@@ -14,7 +14,7 @@
     <div class="m">
       <Character
         imgsrc="images/chrss/m.jpg"
-        charName="愛の人"
+        charName="愛嬌の人"
         :chrss="chrss[1]"
       />
     </div>
@@ -39,7 +39,7 @@
     <div class="mr">
       <Character
         imgsrc="images/chrss/mr.jpg"
-        charName="食品テロリスト"
+        charName="美食テロリスト"
         :chrss="chrss[5]"
       />
     </div>

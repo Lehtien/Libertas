@@ -4,14 +4,50 @@
     <House
       :house-small="fcHouseSmall"
       :house-large="fcHouseLarge"
-      houseName="かんぱにの家"
+      houseName="かんぱにの部屋"
       class="fc-house"
+    />
+    <House
+      :house-small="hHouseSmall"
+      :house-large="hHouseLarge"
+      houseName="ふぁっしょんりーだーの部屋"
+      class="h-house"
+    />
+    <House
+      :house-small="mHouseSmall"
+      :house-large="mHouseLarge"
+      houseName="愛嬌の部屋"
+      class="m-house"
     />
     <House
       :house-small="tHouseSmall"
       :house-large="tHouseLarge"
-      houseName="撮の家"
+      houseName="撮の部屋"
       class="t-house"
+    />
+    <House
+      :house-small="eHouseSmall"
+      :house-large="eHouseLarge"
+      houseName="廃の部屋"
+      class="e-house"
+    />
+    <House
+      :house-small="kHouseSmall"
+      :house-large="kHouseLarge"
+      houseName="天使の部屋"
+      class="k-house"
+    />
+    <House
+      :house-small="mrHouseSmall"
+      :house-large="mrHouseLarge"
+      houseName="美食テロリスト育成学校"
+      class="mr-house"
+    />
+    <House
+      :house-small="nHouseSmall"
+      :house-large="nHouseLarge"
+      houseName="猫の部屋"
+      class="n-house"
     />
     <transition name="toppage">
       <a v-scroll-to="'.housepage'" class="scroll-top" v-show="isTopBtn"
@@ -75,7 +111,8 @@ export default {
         "images/house/fc/fc_small/02_small.jpg",
         "images/house/fc/fc_small/03_small.jpg",
         "images/house/fc/fc_small/04_small.jpg",
-        "images/house/fc/fc_small/05_small.jpg"
+        "images/house/fc/fc_small/05_small.jpg",
+        "images/house/fc/fc_small/06_small.jpg"
       ];
     },
     fcHouseLarge() {
@@ -84,7 +121,40 @@ export default {
         "images/house/fc/fc_large/02_large.jpg",
         "images/house/fc/fc_large/03_large.jpg",
         "images/house/fc/fc_large/04_large.jpg",
-        "images/house/fc/fc_large/05_large.jpg"
+        "images/house/fc/fc_large/05_large.jpg",
+        "images/house/fc/fc_large/06_large.jpg"
+      ];
+    },
+    hHouseSmall() {
+      return [
+        "images/house/h/h_small/01_small.jpg",
+        "images/house/h/h_small/02_small.jpg",
+        "images/house/h/h_small/03_small.jpg",
+        "images/house/h/h_small/04_small.jpg"
+      ];
+    },
+    hHouseLarge() {
+      return [
+        "images/house/h/h_large/01_large.jpg",
+        "images/house/h/h_large/02_large.jpg",
+        "images/house/h/h_large/03_large.jpg",
+        "images/house/h/h_large/04_large.jpg"
+      ];
+    },
+    mHouseSmall() {
+      return [
+        "images/house/m/m_small/01_small.jpg",
+        "images/house/m/m_small/02_small.jpg",
+        "images/house/m/m_small/03_small.jpg",
+        "images/house/m/m_small/04_small.jpg"
+      ];
+    },
+    mHouseLarge() {
+      return [
+        "images/house/m/m_large/01_large.jpg",
+        "images/house/m/m_large/02_large.jpg",
+        "images/house/m/m_large/03_large.jpg",
+        "images/house/m/m_large/04_large.jpg"
       ];
     },
     tHouseSmall() {
@@ -101,6 +171,70 @@ export default {
         "images/house/t/t_large/02_large.jpg",
         "images/house/t/t_large/03_large.jpg",
         "images/house/t/t_large/04_large.jpg"
+      ];
+    },
+    eHouseSmall() {
+      return [
+        "images/house/e/e_small/01_small.jpg",
+        "images/house/e/e_small/02_small.jpg",
+        "images/house/e/e_small/03_small.jpg",
+        "images/house/e/e_small/04_small.jpg"
+      ];
+    },
+    eHouseLarge() {
+      return [
+        "images/house/e/e_large/01_large.jpg",
+        "images/house/e/e_large/02_large.jpg",
+        "images/house/e/e_large/03_large.jpg",
+        "images/house/e/e_large/04_large.jpg"
+      ];
+    },
+    kHouseSmall() {
+      return [
+        "images/house/k/k_small/01_small.jpg",
+        "images/house/k/k_small/02_small.jpg",
+        "images/house/k/k_small/03_small.jpg",
+        "images/house/k/k_small/04_small.jpg"
+      ];
+    },
+    kHouseLarge() {
+      return [
+        "images/house/k/k_large/01_large.jpg",
+        "images/house/k/k_large/02_large.jpg",
+        "images/house/k/k_large/03_large.jpg",
+        "images/house/k/k_large/04_large.jpg"
+      ];
+    },
+    mrHouseSmall() {
+      return [
+        "images/house/mr/mr_small/01_small.jpg",
+        "images/house/mr/mr_small/02_small.jpg",
+        "images/house/mr/mr_small/03_small.jpg",
+        "images/house/mr/mr_small/04_small.jpg"
+      ];
+    },
+    mrHouseLarge() {
+      return [
+        "images/house/mr/mr_large/01_large.jpg",
+        "images/house/mr/mr_large/02_large.jpg",
+        "images/house/mr/mr_large/03_large.jpg",
+        "images/house/mr/mr_large/04_large.jpg"
+      ];
+    },
+    nHouseSmall() {
+      return [
+        "images/house/n/n_small/01_small.jpg",
+        "images/house/n/n_small/02_small.jpg",
+        "images/house/n/n_small/03_small.jpg",
+        "images/house/n/n_small/04_small.jpg"
+      ];
+    },
+    nHouseLarge() {
+      return [
+        "images/house/n/n_large/01_large.jpg",
+        "images/house/n/n_large/02_large.jpg",
+        "images/house/n/n_large/03_large.jpg",
+        "images/house/n/n_large/04_large.jpg"
       ];
     },
     isTopBtn() {

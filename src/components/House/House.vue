@@ -68,7 +68,7 @@ export default {
 // 家の名前
 .name {
   font-family: serif, sans-serif;
-  background: linear-gradient(0deg, #45ff7d, #007c45);
+  background: linear-gradient(0deg, #45ff7d, #e07f00);
   background-clip: text;
   color: transparent;
   margin: 0;
@@ -80,14 +80,16 @@ export default {
 // 大画像
 .main-block {
   position: relative;
-  height: 36vw;
+  height: 33vw;
+  max-height: 650px;
 }
 .main-img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  max-width: 60%;
+  width: 55%;
+  max-width: 1056px;
   margin: 0.3% auto;
   &[lazy="loaded"] {
     border: 0.2em solid black;
@@ -99,6 +101,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 45%;
+  max-width: 900px;
   margin: 0 auto;
   [class^="img"] {
     width: 100%;
@@ -131,7 +134,7 @@ export default {
 // 切り替え
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 1.5s;
+  transition: opacity 1s;
 }
 .fade-enter,
 .fade-leave-to {
@@ -147,9 +150,5 @@ export default {
 }
 input[type="image"] {
   cursor: none;
-}
-
-.fc-house .main-block {
-  height: 28vw;
 }
 </style>
